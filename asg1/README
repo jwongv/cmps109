@@ -1,0 +1,13 @@
+Jacky Wong
+ID: 1281439
+
+This program computes PI using a Monte Carlo method.
+
+In this program, I learned about several c++ libraries such as iostream.
+I also learned how to print using cout and take input using cin.
+I also learned how to use vectors in place of arrays.
+Comments should be of the // format instead of /*/
+Instead of using defines, const should be used.
+I also learned how to use inline to save time.
+
+To compile, type "make all". To run the program, type "main".
