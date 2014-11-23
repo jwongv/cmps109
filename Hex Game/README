@@ -1,0 +1,31 @@
+Collaborators: Jacky Wong
+               Michael Ungerer
+               Hang Gao
+
+This program creates an 11x11 hexboard and randomly fills up the hexes with a player.
+The program allows the player to enter coordinates for the board and play against the AI.
+The AI uses a Monte Carlo method to determine the best move it can make.
+The program uses threading to speed up the calculation of the AI's next move. We used POSIX threading.
+It uses 2 threads and splits up the number of random games between the two threads (500 each totalling 1000).
+It also performs a regular single thread and compares the time it takes for both of them.
+Threading may not actually increase performance on the UNIX timeshare, however, as the game progresses, the threaded time seems to improve.
+
+In this program, we learned how to implement a Monte Carlo AI.
+We also learned how to implement threading.
+We also learned how to use chrono and to time things in miliseconds.
+The workload for this project was split up evenly. We were all present at all times while working on this program.
+Each person took turns writing code, while the others would observe and discuss about what to do and how to go about problems we faced.
+Overall, threading became a bit complicated because pthreading does not like using class methods as the function to thread. However, we googled some workarounds.
+
+To compile, type "make all". To run the program, type "main". Enter in two numbers, both 0-10, as a coordinate. Entering invalid numbers will prompt you again.
+Entering non-numbers will cause the program to break and infinitely loop.
+
+This program uses a 2D matrix to represent the hexboard.
+The board is printed with the overloaded << operator and the player that owns the hex is filled in.
+
+CREDITS:
+https://github.com/smorad/advanced-programming/blob/master/cs109hw5/cs109hw5/cs109hw5.cpp
+Our Monte Carlo method and AI were slightly based off this program.
+
+http://www.tutorialspoint.com/cplusplus/cpp_multithreading.htm
+This site was the tutorial we used to become familiar with multithreading using POSIX threads.
